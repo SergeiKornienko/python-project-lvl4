@@ -10,3 +10,4 @@ cc-test-reporter
 .pytest_cache
 *.log
 .env
+*.sqlite3
