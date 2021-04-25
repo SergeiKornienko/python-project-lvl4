@@ -25,10 +25,10 @@ jobs:
       - name: Run linter
         run: |
           make lint
+      - name: Run test
         env:
           SECRET_KEY: secret
           DB_ENGINE: SQLite
-      - name: Run test
         run: |
           curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
           chmod +x ./cc-test-reporter
