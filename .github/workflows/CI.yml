@@ -22,9 +22,6 @@ jobs:
         run: |
           pip install poetry
           make install
-      - name: Run linter
-        run: |
-          make lint
       - name: Run checks
         run: make check
         env:
@@ -33,6 +30,8 @@ jobs:
       - name: Publish code coverage report
         uses: paambaati/codeclimate-action@v2.6.0
         env:
+          SECRET_KEY: secret
+          DB_ENGINE: SQLite
           CC_TEST_REPORTER_ID: ${{ secrets.ID_TEST_COVERAGE }}
         with:
           coverageCommand: make test-coverage-report
