@@ -7,13 +7,16 @@
     <link href="{% static 'css/album.css' %}" rel="stylesheet">
     {% bootstrap_css %}
     {% bootstrap_javascript jquery='full' %}
-    {% bootstrap_messages %}
   </head>
   <body class="d-flex flex-column min-vh-100">
     {% include 'include/header.html' %}
-    {% block content %}
+    {% bootstrap_messages %}
+    <div class="container wrapper flex-grow-1">
+     <h1 class="my-4"></h1>
+            {% block content %}
 
-    {% endblock content %}
+            {% endblock content %}
+    </div>
     {% include 'include/footer.html' %}
   </body>
 </html>

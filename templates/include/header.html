@@ -8,8 +8,12 @@
         </div>
         <div class="col-sm-4 offset-md-1 py-4">
           <ul class="list-unstyled">
-            <li><a href=/login/" class="text-white">{% trans 'Вход' %}</a></li>
-            <li><a href="/users/create/" class="text-white">{% trans 'Регистрация' %}</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="/logout/" class="text-white">{% trans 'Выход' %}</a></li>
+            {% else %}
+                <li><a href="/login/" class="text-white">{% trans 'Вход' %}</a></li>
+                <li><a href="/users/create/" class="text-white">{% trans 'Регистрация' %}</a></li>
+            {% endif %}
           </ul>
         </div>
       </div>

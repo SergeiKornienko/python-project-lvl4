@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+
+{% block content %}
+    <h1 class="jumbotron text-center">{% trans 'Авторизация' %}</h1>
+
+    {% if form.errors %}
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button class="close" type="button" data-dismiss="alert" aria-label="close">×</button>
+          <p>
+            {% trans 'Пожалуйста, введите правильные имя пользователя и пароль. Оба поля могут быть чувствительны к регистру.' %}
+          </p>
+        </div>
+    {% endif %}
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        {% for field in form %}
+            <p>
+                {{ field.label_tag }}<br>
+                {{ field }}
+                {% if field.help_text %}
+                    <small style="color: grey">{{ field.help_text }}</small>
+                {% endif %}
+                {% for error in field.errors %}
+                  <p style="color: red">{{ error }}</p>
+                {% endfor %}
+            </p>
+        {% endfor %}
+        <button class="btn btn-primary my-2" type="submit">login</button>
+    </form>
+{% endblock content %}

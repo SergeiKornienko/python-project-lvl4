@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+    <h1 class="jumbotron text-center">{% trans 'Удаление пользователя' %}</h1>
+    {% if user.is_authenticated %}
+    <form method="post">
+        {% csrf_token %}
+        <p>{% trans 'Вы уверены, что хотите удалить аккаунт?' %}</p>
+        <input type="submit" class="btn btn-danger" value={% trans 'Да, удалить!' %}>
+    </form>
+    {% else %}
+        <p><a href="#">Login</a></p>
+    {% endif %}
+{% endblock content %}
