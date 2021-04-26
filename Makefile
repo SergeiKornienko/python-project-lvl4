@@ -1,12 +1,12 @@
 lint:
-	poetry run flake8
+	poetry run flake8 task_manager
 test:
-	poetry run coverage run manage.py test task_manager
+	poetry run coverage run --source 'task_manager' manage.py test task_manager
 runserver:
 	poetry run python manage.py runserverm
 install:
 	poetry install
-build:
+build: check
 	poetry build
 test-coverage-report-xml: test
 	poetry run coverage xml
