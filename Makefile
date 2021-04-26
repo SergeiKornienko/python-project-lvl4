@@ -8,7 +8,7 @@ install:
 	poetry install
 build:
 	poetry build
-test-coverage-report-xml:
+test-coverage-report-xml: test
 	poetry run coverage xml
 #test-coverage-report: test
 #	poetry run coverage report -m $(ARGS)
