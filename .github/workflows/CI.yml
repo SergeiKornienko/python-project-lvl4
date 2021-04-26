@@ -28,10 +28,13 @@ jobs:
           SECRET_KEY: secret
           DB_ENGINE: SQLite
       - name: Publish code coverage report
-        uses: paambaati/codeclimate-action@v2.6.0
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.ID_TEST_COVERAGE }}
           SECRET_KEY: secret
           DB_ENGINE: SQLite
-        with:
-          coverageCommand: make test-coverage-report-xml
+        run: |
+          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+          chmod +x ./cc-test-reporter
+          ./cc-test-reporter before-build
+          make test-coverage-report-xml
+          ./cc-test-reporter after-build -r ${{ secrets.ID_TEST_COVERAGE }}
