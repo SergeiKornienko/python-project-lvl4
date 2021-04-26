@@ -31,5 +31,7 @@ jobs:
         uses: paambaati/codeclimate-action@v2.6.0
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.ID_TEST_COVERAGE }}
+          SECRET_KEY: secret
+          DB_ENGINE: SQLite
         with:
           coverageCommand: make test-coverage-report-xml
