@@ -37,4 +37,4 @@ jobs:
           chmod +x ./cc-test-reporter
           ./cc-test-reporter before-build
           make test-coverage-report-xml
-          ./cc-test-reporter after-build -r ${{ secrets.ID_TEST_COVERAGE }}
+          ./cc-test-reporter after-build --prefix $(readlink -f .) -r ${{ secrets.ID_TEST_COVERAGE }}
