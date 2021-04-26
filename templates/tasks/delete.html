@@ -7,7 +7,7 @@
     <form method="post">
         {% csrf_token %}
         <p>{% trans 'Вы уверены, что хотите удалить аккаунт?' %}</p>
-        <input type="submit" class="btn btn-danger" value={% trans 'Да, удалить!' %}>
+        <button class="btn btn-danger" type="submit">{% trans 'Да, удалить!' %}</button>
     </form>
     {% else %}
         <p><a href="#">Login</a></p>

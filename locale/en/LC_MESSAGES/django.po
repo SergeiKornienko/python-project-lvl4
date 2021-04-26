@@ -2,13 +2,11 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-23 15:08+0300\n"
+"POT-Creation-Date: 2021-04-26 13:35+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: task_manager/settings.py:141
-msgid "Russian"
-msgstr ""
-
-#: task_manager/settings.py:142
-msgid "English"
-msgstr ""
-
 #: task_manager/tasks/views.py:30
-#, fuzzy
-#| msgid "Регистрация"
 msgid "Вы зарегистрированы!"
 msgstr "You are registered!"
 
@@ -40,17 +28,15 @@ msgstr "You are login!"
 msgid "Вы разлогинены!"
 msgstr "You are logout!"
 
-#: task_manager/tasks/views.py:54
+#: task_manager/tasks/views.py:55
 msgid "У вас нет прав для изменения другого пользователя."
 msgstr "You do not have permission to modify another user."
 
-#: task_manager/tasks/views.py:68
+#: task_manager/tasks/views.py:72
 msgid "Данные изменены!"
 msgstr "Profile changed!"
 
-#: task_manager/tasks/views.py:79
-#, fuzzy
-#| msgid "Пользователи"
+#: task_manager/tasks/views.py:85
 msgid "Пользователь удален!"
 msgstr "User deleted!"
 
@@ -91,8 +77,6 @@ msgid "Пользователи"
 msgstr "Users"
 
 #: templates/tasks/delete.html:5
-#, fuzzy
-#| msgid "Пользователи"
 msgid "Удаление пользователя"
 msgstr "Delete the user"
 
@@ -105,8 +89,6 @@ msgid "Да, удалить!"
 msgstr "Yes, delete!"
 
 #: templates/tasks/login.html:6
-#, fuzzy
-#| msgid "Регистрация"
 msgid "Авторизация"
 msgstr "Login"
 
@@ -119,8 +101,6 @@ msgstr ""
 "sensitive."
 
 #: templates/tasks/register.html:21
-#, fuzzy
-#| msgid "Регистрация"
 msgid "Зарегистрироваться"
 msgstr "Sign up"
 
@@ -133,8 +113,6 @@ msgid "Сохранить"
 msgstr "Save"
 
 #: templates/tasks/users.html:9
-#, fuzzy
-#| msgid "Пользователи"
 msgid "Имя пользователя"
 msgstr "Name"
 
