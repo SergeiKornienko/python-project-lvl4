@@ -1,5 +1,5 @@
 from django.urls import path
-from task_manager.tasks import views
+from task_manager.users import views
 
 urlpatterns = [
     path('', views.HomePageView.as_view(), name='home'),

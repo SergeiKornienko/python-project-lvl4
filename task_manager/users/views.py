@@ -20,19 +20,19 @@ class HomePageView(TemplateView):
 class UsersView(ListView):
     model = User
     queryset = User.objects.all()
-    template_name = 'tasks/users.html'
+    template_name = 'users/users.html'
 
 
 class RegisterUserView(SuccessMessageMixin, CreateView):
     form_class = RegistrationForm
-    template_name = 'tasks/register.html'
+    template_name = 'users/register.html'
     success_url = reverse_lazy('login')
     success_message = gettext_lazy('Вы зарегистрированы!')
 
 
 class LoginUserView(SuccessMessageMixin, LoginView):
     form_class = AuthenticationForm
-    template_name = 'tasks/login.html'
+    template_name = 'users/login.html'
     redirect_field_name = reverse_lazy('home')
     success_message = gettext_lazy('Вы залогинены!')
 
@@ -67,7 +67,7 @@ class UpdateUserView(
 ):
     model = User
     form_class = RegistrationForm
-    template_name = 'tasks/update.html'
+    template_name = 'users/update.html'
     success_url = reverse_lazy('home')
     success_message = gettext_lazy('Данные изменены!')
     login_url = '/login/'
@@ -77,7 +77,7 @@ class DeleteUserView(
     LoginRequiredMixin, OwnerOnlyMixin, SuccessMessageMixin, DeleteView,
 ):
     model = User
-    template_name = 'tasks/delete.html'
+    template_name = 'users/delete.html'
     success_url = reverse_lazy('home')
     login_url = '/login/'
 

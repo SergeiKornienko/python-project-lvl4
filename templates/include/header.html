@@ -19,17 +19,20 @@
       </div>
     </div>
   </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
-    <div class="container d-flex justify-content-between">
+  <nav class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
       <a href="/" class="navbar-brand d-flex align-items-center">
         <strong>{% trans 'Менеджер задач' %}</strong>
       </a>
-      <a href="/users/" class="navbar-brand d-flex mr-auto">
+      <a href="/users/" class="navbar-brand d-flex align-items-center">
         {% trans 'Пользователи' %}
+      </a>
+      <a href="/statuses/" class="navbar-brand d-flex mr-auto">
+        {% trans 'Статусы' %}
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
-  </div>
+  </nav>
 </header>

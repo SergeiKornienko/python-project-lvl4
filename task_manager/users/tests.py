@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 
 class UserTest(TestCase):
-    # fixtures = ['user']
+    # fixtures = ['test.json']
 
     def setUp(self):
         self.client = Client()

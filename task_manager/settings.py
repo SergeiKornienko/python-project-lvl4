@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'bootstrap4',
-    'task_manager.tasks',
+    'task_manager.users',
+    'task_manager.statuses',
 ]
 
 MIDDLEWARE = [
@@ -163,3 +164,5 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+FIXTURE_DIRS = [os.path.join(BASE_DIR, 'fixtures')]
