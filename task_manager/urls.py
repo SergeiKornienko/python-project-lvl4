@@ -27,7 +27,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path('', include('task_manager.users.urls')),
-    path('', include('task_manager.statuses.urls')),
+    path('', include('task_manager.tasks.urls')),
     prefix_default_language=False
 )
 

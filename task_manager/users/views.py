@@ -67,7 +67,7 @@ class UpdateUserView(
 ):
     model = User
     form_class = RegistrationForm
-    template_name = 'users/update.html'
+    template_name = 'users/update_user.html'
     success_url = reverse_lazy('home')
     success_message = gettext_lazy('Данные изменены!')
     login_url = '/login/'
@@ -77,7 +77,7 @@ class DeleteUserView(
     LoginRequiredMixin, OwnerOnlyMixin, SuccessMessageMixin, DeleteView,
 ):
     model = User
-    template_name = 'users/delete.html'
+    template_name = 'users/delete_user.html'
     success_url = reverse_lazy('home')
     login_url = '/login/'
 

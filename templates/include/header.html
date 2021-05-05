@@ -19,20 +19,85 @@
       </div>
     </div>
   </div>
-  <nav class="navbar navbar-dark bg-dark shadow-sm">
-    <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a href="/" class="navbar-brand d-flex align-items-center">
-        <strong>{% trans 'Менеджер задач' %}</strong>
-      </a>
-      <a href="/users/" class="navbar-brand d-flex align-items-center">
-        {% trans 'Пользователи' %}
-      </a>
-      <a href="/statuses/" class="navbar-brand d-flex mr-auto">
-        {% trans 'Статусы' %}
-      </a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container d-flex flex-md " id="navbarHeader">
+
+        <ul class="navbar-nav mr-auto">
+          <li>
+          <a class="navbar-brand" href="/"><strong>{% trans 'Менеджер задач' %}</strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/users/">{% trans 'Пользователи' %}</a>
+          </li>
+{% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/statuses/">{% trans 'Статусы' %}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/labels/">Метки</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/tasks/">Задачи</a>
+            </li>
+{% endif %}
+        </ul>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+
+
+          <ul class="navbar-nav mr-right">
+            {% if user.is_authenticated %}
+                <li class="nav-item"><a href="/logout/" class="nav-link">{% trans 'Выход' %}</a></li>
+            {% else %}
+                <li class="nav-item"><a href="/login/" class="nav-link">{% trans 'Вход' %}</a></li>
+                <li class="nav-item"><a href="/users/create/" class="nav-link">{% trans 'Регистрация' %}</a></li>
+            {% endif %}
+          </ul>
+
+
     </div>
+
   </nav>
+{#  <nav class="navbar  navbar-dark bg-dark shadow-sm ">#}
+{#    <div class="container d-flex flex-md ">#}
+{#      <a class="navbar-brand" href="/"><strong>{% trans 'Менеджер задач' %}</strong></a>#}
+{##}
+{#      <a href="/users/" class="navbar-brand d-flex mr-auto">#}
+{#        {% trans 'Пользователи' %}#}
+{#      </a>#}
+{#      {% if user.is_authenticated %}#}
+{#      <a href="/statuses/" class="navbar-brand d-flex mr-auto">#}
+{#        {% trans 'Статусы' %}#}
+{#      </a>#}
+{#      {% endif %}#}
+{#      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">#}
+{#        <span class="navbar-toggler-icon"></span>#}
+{#      </button>#}
+{#    </div>#}
+{#  </nav>#}
 </header>
+
+{#<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">#}
+{#      <a class="navbar-brand" href="/">Менеджер задач</a>#}
+{#      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent">#}
+{#        <span class="navbar-toggler-icon"></span>#}
+{#      </button>#}
+{#      <div class="collapse navbar-collapse" id="navbarToggleExternalContent">#}
+{#        <ul class="navbar-nav mr-auto">#}
+{#          <li class="nav-item">#}
+{#            <a class="nav-link" href="/users/">Пользователи</a>#}
+{#          </li>#}
+{##}
+{#            <li class="nav-item">#}
+{#              <a class="nav-link" href="/statuses/">Статусы</a>#}
+{#            </li>#}
+{#            <li class="nav-item">#}
+{#              <a class="nav-link" href="/labels/">Метки</a>#}
+{#            </li>#}
+{#            <li class="nav-item">#}
+{#              <a class="nav-link" href="/tasks/">Задачи</a>#}
+{#            </li>#}
+{##}
+{#        </ul>#}

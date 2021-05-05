@@ -1,4 +1,3 @@
-from datetime import datetime
 from django.utils import timezone
 from django.db import models
 
@@ -14,5 +13,3 @@ class Status(models.Model):
     class Meta:
         verbose_name = 'Статус'
         verbose_name_plural = 'Стaтусы'
-
-

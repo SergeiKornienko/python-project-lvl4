@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+     <h1 class="jumbotron text-center">{% trans 'Удалить статус' %}</h1>
+    <form method="post">
+    {% csrf_token %}
+      <p>{% trans 'Вы уверены, что хотите удалить статус'%} <strong>"{{ object.name }}"</strong>?</p>
+    <button class="btn btn-danger" type="submit">{% trans 'Удалить' %}</button>
+  </form>
+
+{% endblock content %}

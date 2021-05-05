@@ -1,5 +1,18 @@
 [
 {
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2021-05-05T15:56:20.010Z",
+    "user": 16,
+    "content_type": 4,
+    "object_id": "18",
+    "object_repr": "test",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -216,6 +229,78 @@
   }
 },
 {
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add Статус",
+    "content_type": 7,
+    "codename": "add_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change Статус",
+    "content_type": 7,
+    "codename": "change_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete Статус",
+    "content_type": 7,
+    "codename": "delete_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view Статус",
+    "content_type": 7,
+    "codename": "view_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add Статус",
+    "content_type": 8,
+    "codename": "add_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change Статус",
+    "content_type": 8,
+    "codename": "change_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete Статус",
+    "content_type": 8,
+    "codename": "delete_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view Статус",
+    "content_type": 8,
+    "codename": "view_status"
+  }
+},
+{
   "model": "auth.user",
   "pk": 7,
   "fields": {
@@ -310,7 +395,7 @@
   "pk": 16,
   "fields": {
     "password": "pbkdf2_sha256$260000$2Z3Y2uDOjCemHCBkkWhhXE$qP7PjpUm5d4TBRWF1Nz08b1LGBHZh5Qxem2iQLdkIqg=",
-    "last_login": "2021-04-26T10:23:13.422Z",
+    "last_login": "2021-05-05T15:55:33.152Z",
     "is_superuser": true,
     "username": "admin",
     "first_name": "",
@@ -345,8 +430,8 @@
   "model": "auth.user",
   "pk": 18,
   "fields": {
-    "password": "pbkdf2_sha256$260000$GPKCUT4LSe0y3uVLxAl0VZ$/SeMlnElghs975qUxpr0JViCOQGWTqKZsEt4/usnHgo=",
-    "last_login": "2021-04-26T12:38:09.890Z",
+    "password": "pbkdf2_sha256$260000$do1Sz00Kiwi3XZNYLGuKKg$YQZ8SXDJOv5drl63rjYZ1j5o+UymM8lIaHFyyeD5ULU=",
+    "last_login": "2021-05-05T15:56:53.629Z",
     "is_superuser": false,
     "username": "test",
     "first_name": "test",
@@ -408,6 +493,22 @@
   }
 },
 {
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "statuses",
+    "model": "status"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "tasks",
+    "model": "status"
+  }
+},
+{
   "model": "sessions.session",
   "pk": "359sz536vk7dkrph2n01jmh9a04exdkd",
   "fields": {
@@ -425,10 +526,10 @@
 },
 {
   "model": "sessions.session",
-  "pk": "om38jb4bqx2avr9v1wcq5ggdbr1lbjgr",
+  "pk": "lppwwauute1086baocnnux1dyax096h6",
   "fields": {
-    "session_data": ".eJxVjEEOwiAQRe_C2pC2A1Pq0n3PQGYGkKqhSWlXxrsbki50-997_608HXv2R42bX4K6qt6py-_IJM9YGgkPKvdVy1r2bWHdFH3Squc1xNftdP8OMtXcapeQCAiYHYOIAKYxEJKlKUULg7GBA6Z-HCbsrKAICyI5AykZ6NTnC0RpOSY:1lb0V7:ft5CpnJdA_b8ERWUw8-AQWBqGcNf-ucp5IR1RX8Uzm0",
-    "expire_date": "2021-05-10T12:38:09.893Z"
+    "session_data": ".eJxVjMsOwiAQRf-FtSHQ8hhcuvcbyAxDpWogKe3K-O_apAvd3nPOfYmI21ri1vMSZxZnoUGcfkfC9Mh1J3zHemsytbouM8ldkQft8to4Py-H-3dQsJdvDY7cyCoktoG8HdkYZSwM2qtJg3eTtuxAIeswesxJsQdDMLBxBBmceH8A4_k3Mg:1leJtN:uzowPBmmtJR6HWXsE-BxVlvmCbEdZ0-_6T6HguJGQqA",
+    "expire_date": "2021-05-19T15:56:53.631Z"
   }
 },
 {
@@ -453,6 +554,38 @@
   "fields": {
     "session_data": ".eJxVjEEOwiAQRe_C2hCKMAWX7nsGMsyAVA0kpV0Z765NutDtf-_9lwi4rSVsPS1hZnERA4jT7xiRHqnuhO9Yb01Sq-syR7kr8qBdTo3T83q4fwcFe_nWgEjJazIIVmtljAMFnNA4JFSDy56ydQ4jsYpx5GyyHkFpxekM2lvx_gAZcDhe:1lYW2l:unmbsbXc-_OSefUhDn1M9CFQlNVPRqfc51v9KFQM_xg",
     "expire_date": "2021-05-03T15:42:35.965Z"
+  }
+},
+{
+  "model": "tasks.status",
+  "pk": 9,
+  "fields": {
+    "name": "выполнено",
+    "created_at": "2021-04-30T07:22:06.890Z"
+  }
+},
+{
+  "model": "tasks.status",
+  "pk": 10,
+  "fields": {
+    "name": "в работе1",
+    "created_at": "2021-04-30T07:22:24.528Z"
+  }
+},
+{
+  "model": "tasks.status",
+  "pk": 11,
+  "fields": {
+    "name": "на тестировании",
+    "created_at": "2021-04-30T07:22:53.506Z"
+  }
+},
+{
+  "model": "tasks.status",
+  "pk": 12,
+  "fields": {
+    "name": "новый",
+    "created_at": "2021-04-30T07:23:05.689Z"
   }
 }
 ]

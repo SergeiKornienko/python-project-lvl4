@@ -9,29 +9,28 @@ class StatusTest(TestCase):
     def setUp(self):
         self.client = Client()
         self.client.login(username='test', password='pass')
+
+    def test_status_create(self):
         self.response = self.client.post(
             reverse_lazy('create_status'),
             data={'name': 'test_status'},
         )
-
-    def test_status_create(self):
         self.assertRedirects(self.response, reverse_lazy('statuses'))
         self.assertTrue(Status.objects.filter(name='test_status'))
 
     def test_status_update(self):
-
-        status = Status.objects.get()
+        status = Status.objects.get(name='выполнено')
         response = self.client.post(
-            reverse_lazy('update', kwargs={'pk': status.id}),
+            reverse_lazy('update_status', kwargs={'pk': status.id}),
             data={'name': 'test2'},
         )
         self.assertRedirects(response, reverse_lazy('statuses'))
         self.assertTrue(Status.objects.filter(name='test2'))
 
     def test_status_delete(self):
-        status = Status.objects.get()
+        status = Status.objects.get(name='выполнено')
         response = self.client.post(
-            reverse_lazy('delete', kwargs={'pk': status.id}),
+            reverse_lazy('delete_status', kwargs={'pk': status.id}),
         )
         self.assertRedirects(response, reverse_lazy('statuses'))
-        self.assertFalse(Status.objects.filter(name='test2'))
+        self.assertFalse(Status.objects.filter(name='выполнено'))

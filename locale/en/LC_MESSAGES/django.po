@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-26 13:35+0300\n"
+"POT-Creation-Date: 2021-04-30 09:41+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,27 +16,39 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: task_manager/tasks/views.py:30
+#: task_manager/tasks/views.py:24
+msgid "Статус создан!"
+msgstr "Status create"
+
+#: task_manager/tasks/views.py:66
+msgid "Статус изменен!"
+msgstr "Status changed!"
+
+#: task_manager/tasks/views.py:73
+msgid "Статус удален!"
+msgstr "Status deleted!"
+
+#: task_manager/users/views.py:30
 msgid "Вы зарегистрированы!"
 msgstr "You are registered!"
 
-#: task_manager/tasks/views.py:37
+#: task_manager/users/views.py:37
 msgid "Вы залогинены!"
 msgstr "You are login!"
 
-#: task_manager/tasks/views.py:44
+#: task_manager/users/views.py:44
 msgid "Вы разлогинены!"
 msgstr "You are logout!"
 
-#: task_manager/tasks/views.py:55
+#: task_manager/users/views.py:55
 msgid "У вас нет прав для изменения другого пользователя."
 msgstr "You do not have permission to modify another user."
 
-#: task_manager/tasks/views.py:72
+#: task_manager/users/views.py:72
 msgid "Данные изменены!"
 msgstr "Profile changed!"
 
-#: task_manager/tasks/views.py:85
+#: task_manager/users/views.py:85
 msgid "Пользователь удален!"
 msgstr "User deleted!"
 
@@ -64,7 +76,7 @@ msgstr "Logout"
 msgid "Вход"
 msgstr "Login"
 
-#: templates/include/header.html:15 templates/tasks/register.html:5
+#: templates/include/header.html:15 templates/users/register.html:5
 msgid "Регистрация"
 msgstr "Sign up"
 
@@ -72,27 +84,67 @@ msgstr "Sign up"
 msgid "Менеджер задач"
 msgstr "Task manager"
 
-#: templates/include/header.html:28 templates/tasks/users.html:4
+#: templates/include/header.html:28 templates/users/users.html:4
 msgid "Пользователи"
 msgstr "Users"
 
-#: templates/tasks/delete.html:5
+#: templates/include/header.html:31 templates/tasks/statuses/statuses.html:4
+msgid "Статусы"
+msgstr ""
+
+#: templates/tasks/statuses/create_status.html:5
+#: templates/tasks/statuses/statuses.html:6
+msgid "Создать статус"
+msgstr ""
+
+#: templates/tasks/statuses/create_status.html:26
+msgid "Создать"
+msgstr ""
+
+#: templates/tasks/statuses/delete_status.html:5
+msgid "Удалить статус"
+msgstr "Delete"
+
+#: templates/tasks/statuses/delete_status.html:20
+#: templates/tasks/statuses/statuses.html:26 templates/users/users.html:25
+msgid "Удалить"
+msgstr "Delete"
+
+#: templates/tasks/statuses/statuses.html:12
+msgid "Имя"
+msgstr ""
+
+#: templates/tasks/statuses/statuses.html:13 templates/users/users.html:11
+msgid "Дата создания"
+msgstr "Date of create"
+
+#: templates/tasks/statuses/statuses.html:24
+#: templates/tasks/statuses/update_status.html:20 templates/users/users.html:23
+msgid "Изменить"
+msgstr "Update"
+
+#: templates/tasks/statuses/update_status.html:5
+
+msgid "Изменить статус"
+msgstr "Update"
+
+#: templates/users/delete_user.html:5
 msgid "Удаление пользователя"
 msgstr "Delete the user"
 
-#: templates/tasks/delete.html:9
+#: templates/users/delete_user.html:9
 msgid "Вы уверены, что хотите удалить аккаунт?"
 msgstr "Are you sure you want to delete your account?"
 
-#: templates/tasks/delete.html:10
+#: templates/users/delete_user.html:10
 msgid "Да, удалить!"
 msgstr "Yes, delete!"
 
-#: templates/tasks/login.html:6
+#: templates/users/login.html:6
 msgid "Авторизация"
 msgstr "Login"
 
-#: templates/tasks/login.html:12
+#: templates/users/login.html:12
 msgid ""
 "Пожалуйста, введите правильные имя пользователя и пароль. Оба поля могут "
 "быть чувствительны к регистру."
@@ -100,34 +152,22 @@ msgstr ""
 "Please enter the correct username and password. Both fields can be case "
 "sensitive."
 
-#: templates/tasks/register.html:21
+#: templates/users/register.html:21
 msgid "Зарегистрироваться"
 msgstr "Sign up"
 
-#: templates/tasks/update.html:5
+#: templates/users/update_user.html:5
 msgid "Изменение профиля"
 msgstr "Change profile"
 
-#: templates/tasks/update.html:21
+#: templates/users/update_user.html:21
 msgid "Сохранить"
 msgstr "Save"
 
-#: templates/tasks/users.html:9
+#: templates/users/users.html:9
 msgid "Имя пользователя"
 msgstr "Name"
 
-#: templates/tasks/users.html:10
+#: templates/users/users.html:10
 msgid "Полное имя"
 msgstr "Full name"
-
-#: templates/tasks/users.html:11
-msgid "Дата создания"
-msgstr "Date of create"
-
-#: templates/tasks/users.html:23
-msgid "Изменить"
-msgstr "Change"
-
-#: templates/tasks/users.html:25
-msgid "Удалить"
-msgstr "Delete"
