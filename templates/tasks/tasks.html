@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+    <h1 class="jumbotron text-center">{% trans 'Задачи' %}</h1>
+
+          <h5><a href="{% url 'create_task' %}" class="text-black">{% trans 'Создать задачу' %}</a></h5>
+
+        <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>{% trans 'Имя' %}</th>
+                <th>{% trans 'Статус' %}</th>
+                <th>{% trans 'Автор' %}</th>
+                <th>{% trans 'Исполнитель' %}</th>
+                <th>{% trans 'Дата создания' %}</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in task_list %}
+                <tr>
+                    <td>{{ task.id }}</td>
+                    <td>{{ task.name }}</td>
+                    <td>{{ task.status }}</td>
+                    <td>{{ task.author }}</td>
+                    <td>{{ task.performer }}</td>
+                    <td>{{ task.created_at }}</td>
+                    <td>
+                        <a href={% url 'update_task' task.id %} >{% trans 'Изменить' %}</a>
+                        <br>
+                        <a href={% url 'delete_task' task.id %}>{% trans 'Удалить' %}</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock content %}

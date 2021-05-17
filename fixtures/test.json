@@ -13,6 +13,19 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2021-05-17T12:48:10.218Z",
+    "user": 16,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Task object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -301,6 +314,42 @@
   }
 },
 {
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add task",
+    "content_type": 9,
+    "codename": "add_task"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change task",
+    "content_type": 9,
+    "codename": "change_task"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete task",
+    "content_type": 9,
+    "codename": "delete_task"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view task",
+    "content_type": 9,
+    "codename": "view_task"
+  }
+},
+{
   "model": "auth.user",
   "pk": 7,
   "fields": {
@@ -395,7 +444,7 @@
   "pk": 16,
   "fields": {
     "password": "pbkdf2_sha256$260000$2Z3Y2uDOjCemHCBkkWhhXE$qP7PjpUm5d4TBRWF1Nz08b1LGBHZh5Qxem2iQLdkIqg=",
-    "last_login": "2021-05-05T15:55:33.152Z",
+    "last_login": "2021-05-16T14:35:08.736Z",
     "is_superuser": true,
     "username": "admin",
     "first_name": "",
@@ -509,6 +558,22 @@
   }
 },
 {
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "tasks",
+    "model": "task"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "2stpu4axwkedlzmtik4omx91dwzorgrq",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyFsoUA9eu83kF1YpGpoUtqT8d9tkx70NMm8N_MWAbe1hK3xEqYkrgKsuPyWhPHJ9SDpgfU-yzjXdZlIHoo8aZPjnPh1O92_g4Kt7GvVGUuY7Z5dtDoOmMFplVSmwTpC1r5HZ3KvCRNrYK0IojcEHiN4EJ8vBGY4Fw:1liHrI:DAxnSiJuZEpSfMt6vGScMDMXXXg0cLQzSZR-DMtCB9I",
+    "expire_date": "2021-05-30T14:35:08.742Z"
+  }
+},
+{
   "model": "sessions.session",
   "pk": "359sz536vk7dkrph2n01jmh9a04exdkd",
   "fields": {
@@ -522,14 +587,6 @@
   "fields": {
     "session_data": ".eJztzLFugzAUheFXAc8IOa5xoGOljp2aLUToYpuQtAUpTqaq716QUql9gw7_cJdzvns-VSe369jdUrx0p6Ae1cap4nfYi3-L09qEs0zHufTzdL2c-nIl5b1N5csc4vvT3f4ZGCWNy7cT8bEx3oqrjNHW1k67EMXW4kVv6qHxQ1XX0vug-34bBjuYrdNGh_jgTFOtox8xJTnGtMzt963qunOap5-0VUWmi8wu16rd8-suz_NWHYoMiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRP53eVBf3-jrqto:1lYpr3:xvzgEI__VgwStaIXDhwzOF9K8YCEATNWqODSdwlyMOM",
     "expire_date": "2021-05-04T12:51:49.652Z"
-  }
-},
-{
-  "model": "sessions.session",
-  "pk": "lppwwauute1086baocnnux1dyax096h6",
-  "fields": {
-    "session_data": ".eJxVjMsOwiAQRf-FtSHQ8hhcuvcbyAxDpWogKe3K-O_apAvd3nPOfYmI21ri1vMSZxZnoUGcfkfC9Mh1J3zHemsytbouM8ldkQft8to4Py-H-3dQsJdvDY7cyCoktoG8HdkYZSwM2qtJg3eTtuxAIeswesxJsQdDMLBxBBmceH8A4_k3Mg:1leJtN:uzowPBmmtJR6HWXsE-BxVlvmCbEdZ0-_6T6HguJGQqA",
-    "expire_date": "2021-05-19T15:56:53.631Z"
   }
 },
 {
@@ -568,7 +625,7 @@
   "model": "tasks.status",
   "pk": 10,
   "fields": {
-    "name": "в работе1",
+    "name": "в работе",
     "created_at": "2021-04-30T07:22:24.528Z"
   }
 },
@@ -586,6 +643,18 @@
   "fields": {
     "name": "новый",
     "created_at": "2021-04-30T07:23:05.689Z"
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 1,
+  "fields": {
+    "name": "123",
+    "created_at": "2021-05-17T12:47:28Z",
+    "description": "123vdv",
+    "author": 17,
+    "performer": 16,
+    "status": 12
   }
 }
 ]
